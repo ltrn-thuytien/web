@@ -510,28 +510,17 @@ section {
 .noi-dung-footer {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Clear float */
-.noi-dung-footer::after {
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
 }
 
 /* Mỗi mục footer */
 .muc-footer {
-    width: 23%;
-    /* 4 cột - mỗi cột 23% */
-    float: left;
-    margin-right: 2.66%;
-    /* Khoảng cách giữa các cột */
-    min-width: 220px;
-}
-
-/* Mục thứ 4 không có margin-right */
-.muc-footer:nth-child(4) {
-    margin-right: 0;
+    flex: 0 1 300px;
+    /* Cố định ~300px, đơn giản hơn */
+    text-align: center;
 }
 
 .muc-footer h3 {
