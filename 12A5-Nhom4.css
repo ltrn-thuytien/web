@@ -1,0 +1,579 @@
+/* ============================================
+   FILE CSS - TRANG WEB TRƯỜNG THPT BÌNH PHÚ
+   Nhóm 4 - Lớp 12A5
+   ============================================ */
+
+/* THIẾT LẬP CHUNG CHO TOÀN TRANG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Giúp tính toán kích thước phần tử dễ dàng */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Font chữ cơ bản, dễ đọc */
+    background-color: #f5f5f5;
+    /* Màu nền xám nhạt */
+    color: #23527c;
+    /* Màu chữ xanh đậm */
+    line-height: 1.6;
+    /* Khoảng cách dòng để dễ đọc */
+}
+
+/* CSS chung cho các section lớn - thêm shadow đậm */
+section {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    /* Shadow đậm để phân cách */
+}
+
+/* ============================================
+   PHẦN TIÊU ĐỀ (HEADER)
+   Sử dụng ID vì chỉ có 1 header
+   ============================================ */
+#phan-dau {
+    background-color: #1e4d8b;
+    /* Nền xanh đậm */
+    color: #ffffff;
+    /* Màu chữ trắng */
+    padding: 20px 40px;
+    /* Khoảng cách bên trong */
+    border-bottom: 5px solid #215c9c;
+    /* Viền dưới xanh */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng header */
+}
+
+/* Clear float */
+#phan-dau::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Logo trong header */
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    border-radius: 50%;
+    /* Bo tròn */
+    border: 3px solid #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng logo */
+    float: left;
+    /* Float để logo nằm bên trái */
+}
+
+/* Văn bản trong header - bên trái */
+.thong-tin-dau {
+    float: left;
+    /* Nằm bên trái kế logo */
+    padding-top: 10px;
+}
+
+.thong-tin-dau h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dia-chi-dau {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #ffd700;
+    /* Màu vàng cho địa chỉ */
+    font-weight: bold;
+}
+
+/* ============================================
+   THANH ĐIỀU HƯỚNG (NAVIGATION)
+   ============================================ */
+#thanh-dieu-huong {
+    background-color: #23527c;
+    /* Màu nền xanh đậm */
+    padding: 0;
+    /* Bỏ padding để sát */
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    /* Đổ bóng thanh điều hướng */
+}
+
+#thanh-dieu-huong a {
+    color: #ffffff;
+    text-decoration: none;
+    /* Bỏ gạch dưới */
+    padding: 15px 25px;
+    margin: 0;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#thanh-dieu-huong a:hover {
+    background-color: #215c9c;
+    /* Đổi màu khi hover */
+}
+
+/* ============================================
+   PHẦN NỘI DUNG CHÍNH
+   ============================================ */
+#noi-dung-chinh {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Tiêu đề các phần */
+.tieu-de-muc {
+    font-size: 28px;
+    color: #215c9c;
+    border-bottom: 3px solid #215c9c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ============================================
+   PHẦN GIỚI THIỆU
+   ============================================ */
+.khung-gioi-thieu {
+    background-color: #f0f8ff;
+    /* Màu nền xanh nhạt */
+    border: 2px solid #215c9c;
+}
+
+.noi-dung-gioi-thieu {
+    text-align: justify;
+}
+
+.anh-gioi-thieu {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    border: 3px solid #215c9c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Đổ bóng ảnh */
+}
+
+.noi-dung-gioi-thieu p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* ============================================
+   PHẦN TIN TỨC
+   ============================================ */
+.khung-tin-tuc {
+    /* Box-shadow được kế thừa từ section chung */
+}
+
+/* Wrapper cho 3 tin */
+.luoi-tin-tuc {
+    margin-top: 20px;
+}
+
+/* Clear float sau luoi-tin-tuc */
+.luoi-tin-tuc::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Mỗi bài viết tin tức */
+.muc-tin {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 32%;
+    /* Chia 3 cột */
+    float: left;
+    /* Float để xếp ngang */
+    margin-right: 2%;
+    /* Khoảng cách giữa các tin */
+    margin-bottom: 20px;
+    border: 2px solid #215c9c;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Đổ bóng */
+    min-height: 500px;
+    /* Chiều cao tối thiểu để đều nhau */
+}
+
+/* Tin thứ 3 không có margin-right */
+.muc-tin:nth-child(3) {
+    margin-right: 0;
+}
+
+/* Hiệu ứng hover cho tin tức - chỉ đổi box-shadow */
+.muc-tin:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    /* Đổ bóng đậm hơn */
+}
+
+/* Ảnh tin tức */
+.anh-tin-tuc {
+    width: 100%;
+    height: auto;
+    /* Để ảnh tự động điều chỉnh */
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 2px solid #215c9c;
+}
+
+/* Tiêu đề tin */
+.tieu-de-tin {
+    font-size: 16px;
+    color: #215c9c;
+    margin-bottom: 8px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Thông tin phụ (ngày, tác giả) */
+.thong-tin-phu {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 8px;
+}
+
+/* Nội dung tin */
+.noi-dung-tin {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Nút Xem thêm */
+.nut-xem-them {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #215c9c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nut-xem-them:hover {
+    background-color: #23527c;
+}
+
+/* ============================================
+   THƯ VIỆN ẢNH
+   ============================================ */
+.khung-thu-vien-anh {
+    /* Box-shadow được kế thừa từ section chung */
+}
+
+/* Wrapper cho ảnh */
+.luoi-anh {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Clear float */
+.luoi-anh::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Mỗi mục ảnh */
+.muc-anh {
+    width: 48%;
+    /* 2 cột - mỗi cột 48% */
+    float: left;
+    margin-right: 4%;
+    /* Khoảng cách 4% */
+    margin-bottom: 25px;
+    border: 2px solid #215c9c;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng */
+}
+
+/* Ảnh thứ 2 và 4 không có margin-right */
+.muc-anh:nth-child(2n) {
+    margin-right: 0;
+}
+
+/* Hiệu ứng hover */
+.muc-anh:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng đậm hơn */
+}
+
+.muc-anh img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px 8px 0 0;
+    /* Bo góc trên */
+    object-fit: cover;
+    /* Không biến dạng ảnh */
+    object-position: center;
+    /* Căn giữa ảnh */
+}
+
+/* Phần văn bản */
+.noi-dung-anh {
+    padding: 15px;
+}
+
+.tieu-de-anh {
+    font-size: 16px;
+    color: #215c9c;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.mo-ta-anh {
+    font-size: 14px;
+    color: #23527c;
+    line-height: 1.5;
+}
+
+/* ============================================
+   GÓC VIDEO
+   ============================================ */
+.khung-video {
+    background-color: #fff;
+}
+
+.phu-de-video {
+    font-size: 18px;
+    color: #215c9c;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.khung-chua-video {
+    text-align: center;
+}
+
+.trinh-phat-video {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 3px solid #215c9c;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Đổ bóng */
+}
+
+/* ============================================
+   GÓC BÌNH LUẬN / FORM
+   ============================================ */
+.khung-binh-luan {
+    background-color: #f0f8ff;
+    /* Nền xanh đậm hơn */
+    border: 2px solid #215c9c;
+}
+
+.gioi-thieu-form {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #23527c;
+    font-weight: bold;
+}
+
+/* Form - ôm sát */
+.bieu-mau-lien-he {
+    max-width: 450px;
+    /* Thu nhỏ viền ôm sát */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Nhóm trường */
+.nhom-truong {
+    margin-bottom: 15px;
+}
+
+.nhom-truong label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #215c9c;
+    font-size: 15px;
+}
+
+/* Input và textarea - to lại như cũ */
+.nhom-truong input,
+.nhom-truong textarea {
+    width: 100%;
+    padding: 10px;
+    /* Trở lại 10px */
+    border: 2px solid #215c9c;
+    border-radius: 5px;
+    font-size: 14px;
+    /* Trở lại 14px */
+    font-family: Arial, sans-serif;
+}
+
+/* Textarea */
+.nhom-truong textarea {
+    height: 100px;
+    /* Tăng lại chiều cao */
+}
+
+/* Focus */
+.nhom-truong input:focus,
+.nhom-truong textarea:focus {
+    outline: none;
+    border-color: #23527c;
+    background-color: #f0f8ff;
+    box-shadow: 0 0 8px rgba(33, 92, 156, 0.3);
+}
+
+/* Nút gửi */
+.nut-gui {
+    width: 100%;
+    /* Full width trong form */
+    padding: 12px;
+    background-color: #215c9c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nut-gui:hover {
+    background-color: #23527c;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   PHẦN VỊ TRÍ TRƯỜNG
+   ============================================ */
+.khung-vi-tri {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Bản đồ */
+.ban-do {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    border: 3px solid #215c9c;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Đổ bóng */
+}
+
+.dia-chi-map {
+    text-align: center;
+    font-size: 16px;
+    color: #23527c;
+}
+
+/* ============================================
+   PHẦN CHÂN TRANG (FOOTER)
+   ============================================ */
+#phan-chan {
+    background-color: #215c9c;
+    color: #ffffff;
+    padding: 25px 20px 15px;
+    border-top: 5px solid #23527c;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng footer */
+}
+
+/* Nội dung footer */
+.noi-dung-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Clear float */
+.noi-dung-footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Mỗi mục footer */
+.muc-footer {
+    width: 23%;
+    /* 4 cột - mỗi cột 23% */
+    float: left;
+    margin-right: 2.66%;
+    /* Khoảng cách giữa các cột */
+    min-width: 220px;
+}
+
+/* Mục thứ 4 không có margin-right */
+.muc-footer:nth-child(4) {
+    margin-right: 0;
+}
+
+.muc-footer h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+.muc-footer p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Danh sách */
+.danh-sach-email,
+.danh-sach-nguon {
+    list-style-type: none;
+}
+
+
+.danh-sach-email li,
+.danh-sach-nguon li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Link trong footer */
+.danh-sach-nguon a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.danh-sach-nguon a:hover {
+    opacity: 0.8;
+}
+
+/* Bản quyền */
+.ban-quyen {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 13px;
+}
